@@ -6,7 +6,9 @@ set expandtab
 set autoindent
 filetype indent on " load filetype-spicific indent fils 
 
-"set encoding=utf-8
+let mapleader=" "
+
+set encoding=utf-8
 set number " нумерация строк 
 set noswapfile
 

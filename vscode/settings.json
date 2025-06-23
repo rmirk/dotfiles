@@ -1,0 +1,53 @@
+{
+    // Text editor 
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [120],
+    "editor.tabSize": 2,
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.experimental.showMoves": true,
+
+    // Workbench 
+    "workbench.colorTheme": "Darcula",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#007acc66"
+    },
+    "workbench.editor.tabSizingFixedMaxWidth": 140,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+
+    // Window 
+    "window.restoreWindows": "none",
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "windowed",
+    "window.titleBarStyle": "custom",
+
+    // Features 
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiYellow",
+
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+
+    "chat.commandCenter.enabled": false,
+
+    // Application 
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "manual",
+    "update.showReleaseNotes": false,
+
+    // Extensions 
+    "git.confirmSync": false,
+
+    "cmake.configureOnOpen": false,
+    "cmake.allowCommentsInPresetsFile": true,
+
+    "json.schemaDownload.enable": true,
+}

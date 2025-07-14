@@ -6,13 +6,21 @@ set expandtab
 set autoindent
 filetype indent on " load filetype-spicific indent fils 
 
-set encoding=utf-8
+"set encoding=utf-8
 set number " нумерация строк 
 set noswapfile
 
+set background=dark
 set colorcolumn=79
 
 set clipboard+=unnamedplus
+
+" Langs 
+set spell spelllang=en_us,ru
+
+" Keys 
+nnoremap <Space> <Nop>
+let mapleader=" "
 
 " Exit from insert mode 
 inoremap jk <esc> 
@@ -28,15 +36,11 @@ map <C-S-V> "+gP
 imap <C-S-V>  <C-R>+
 cmap <C-S-V>  <C-R>+
 
-" Plugins 
-call plug#begin()
-
 " Color 
-Plug 'morhetz/gruvbox'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-call plug#end()
-
 colorscheme gruvbox
 
+" Plugins 
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

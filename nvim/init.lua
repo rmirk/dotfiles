@@ -6,3 +6,6 @@ vim.opt.cursorline = true
 vim.opt.termguicolors=true
 -- import 
 require('plugins')
+
+-- LazyVim plugins manager
+require("config.lazy")

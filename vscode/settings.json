@@ -16,7 +16,6 @@
         "editorRuler.foreground": "#007acc66"
     },
     "workbench.editor.tabSizingFixedMaxWidth": 140,
-    "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.enableExperiments": false,

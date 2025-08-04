@@ -3,5 +3,20 @@
   {
     "key": "shift shift",
     "command": "workbench.action.quickOpen"
-  }  
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "terminalFocus"
+  },
 ]

@@ -1,5 +1,14 @@
 {
     // Text editor 
+    "editor.codeLens": false,
+    "editor.fontLigatures": true,
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.tabCompletion": "on",
+    "editor.lineHeight": 1.2,
     "editor.minimap.enabled": false,
     "editor.minimap.autohide": true,
     "editor.minimap.scale": 2,
@@ -7,20 +16,33 @@
     "editor.renderWhitespace": "all",
     "editor.rulers": [120],
     "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
     "editor.unicodeHighlight.allowedLocales": {
         "ru": true
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
 
-    "diffEditor.renderSideBySide": false,
+    "diffEditor.renderSideBySide": true,
     "diffEditor.experimental.showMoves": true,
+    "diffEditor.ignoreTrimWhitespace": true,
 
     // Workbench
     "workbench.colorTheme": "Darcula",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#007acc66"
     },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.showTabs": "single",
     "workbench.editor.tabSizingFixedMaxWidth": 140,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.tabActionCloseVisibility": true,
@@ -29,6 +51,8 @@
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.showAISearchToggle": false,
+    "breadcrumbs.icons": false,
+    "breadcrumbs.enabled": false,
 
     // Window 
     "window.restoreWindows": "none",
@@ -38,7 +62,11 @@
     // Features 
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+
     "terminal.integrated.tabs.defaultColor": "terminal.ansiYellow",
+    "terminal.integrated.scrollback": 10000,
+
+    "search.searchOnType": false,
 
     "chat.commandCenter.enabled": false,
     "chat.agent.enabled": false,
@@ -57,9 +85,10 @@
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
 
-    "diffEditor.ignoreTrimWhitespace": true,
-
     "git.confirmSync": false,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+    "git.blame.editorDecoration.template": "${subject}, ${authorName} ${authorEmail} (${authorDateAgo})",
 
     "cmake.allowCommentsInPresetsFile": true,
     "cmake.automaticReconfigure": false,
@@ -68,12 +97,41 @@
     "cmake.configureOnOpen": false,
     "cmake.configureOnEdit": false,
     "cmake.options.statusBarVisibility": "compact",
+    "cmake.options.advanced": {
+        "testPreset": {
+            "statusBarVisibility": "hidden",
+            "projectVisibility": "hidden"
+        },
+        "ctest": {
+            "statusBarVisibility": "hidden",
+            "projectStatusVisibility": "hidden"
+        },
+        "cpack": {
+            "statusBarVisibility": "hidden",
+            "projectStatusVisibility": "hidden"
+        },
+        "workflow": {
+            "statusBarVisibility": "hidden",
+            "projectStatusVisibility": "hidden"
+        },
+        "workflowPreset": {
+            "statusBarVisibility": "hidden"
+        },
+        "packagePreset": {
+            "statusBarVisibility": "hidden"
+        }
+    },
     "cmake.ctest.testExplorerIntegrationEnabled": false,
+    // "cmake.loggingLevel": "warning",
 
     "svn.defaultCheckoutDirectory": "",
     "svn.diff.withHead": false,
     "svn.autorefresh": false,
+
     "C_Cpp.workspaceParsingPriority": "high",
+    "C_Cpp.caseSensitiveFileSupport": "enabled",
+    "C_Cpp.copilotHover": "disabled",
+
     "[cpp]": {
         "editor.wordBasedSuggestions": "off",
         "editor.semanticHighlighting.enabled": true,

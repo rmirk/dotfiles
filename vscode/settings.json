@@ -138,4 +138,8 @@
         "editor.stickyScroll.defaultModel": "foldingProviderModel",
         "editor.suggest.insertMode": "replace"
     },
+
+    "continue.enableConsole": true,
+    "continue.telemetryEnabled": false,
+    "continue.enableTabAutocomplete": false,
 }

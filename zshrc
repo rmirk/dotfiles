@@ -66,7 +66,7 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -100,6 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
+
+# aichat integrations 
+source $ZSH_CUSTOM/aichat/integration.zsh
+source $ZSH_CUSTOM/aichat/completion.zsh
+
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases

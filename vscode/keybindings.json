@@ -1,10 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-    "key": "shift shift",
-    "command": "workbench.action.quickOpen"
-  },
-  {
     "key": "ctrl+shift+`",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "!terminalFocus"
@@ -19,4 +15,33 @@
     "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "terminalFocus"
   },
+  {
+    "key": "shift+space",
+    "command": "editor.action.inlineSuggest.trigger"
+  },
+  {
+    "key": "shift+space",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "cursorBeforeGhostText && inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "cursorBeforeGhostText && inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+  },
+  {
+    "key": "shift+tab",
+    "command": "-outdent",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "continue.forceAutocomplete",
+    "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+alt+space",
+    "command": "-continue.forceAutocomplete",
+    "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
+  }
 ]

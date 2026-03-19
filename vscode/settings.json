@@ -9,10 +9,10 @@
     },
     "editor.tabCompletion": "on",
     "editor.lineHeight": 1.2,
-    "editor.minimap.enabled": false,
-    "editor.minimap.autohide": true,
     "editor.minimap.scale": 2,
     "editor.minimap.size": "fit",
+    "editor.minimap.autohide": "scroll",
+    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.rulers": [120],
     "editor.tabSize": 2,
@@ -29,8 +29,11 @@
     "editor.unicodeHighlight.allowedLocales": {
         "ru": true
     },
-    "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
+    "editor.inlineSuggest.enabled": false,
+    "editor.accessibilitySupport": "off",
+
+    "zenMode.showTabs": "single",
 
     "diffEditor.renderSideBySide": true,
     "diffEditor.experimental.showMoves": true,
@@ -48,6 +51,7 @@
     "workbench.editor.tabActionCloseVisibility": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.limit.excludeDirty": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.showAISearchToggle": false,
@@ -71,12 +75,16 @@
     "chat.commandCenter.enabled": false,
     "chat.agent.enabled": false,
     "chat.detectParticipant.enabled": false,
+    "chat.disableAIFeatures": true,
 
     "github.gitAuthentication": false,
     "github.branchProtection": false,
 
     // Application 
     "telemetry.telemetryLevel": "off",
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+
     "update.mode": "manual",
     "update.showReleaseNotes": false,
 
@@ -123,6 +131,7 @@
     },
     "cmake.ctest.testExplorerIntegrationEnabled": false,
     // "cmake.loggingLevel": "warning",
+    "cmake.showNotAllDocumentsSavedQuestion": false,
 
     "svn.defaultCheckoutDirectory": "",
     "svn.diff.withHead": false,
@@ -141,5 +150,6 @@
 
     "continue.enableConsole": true,
     "continue.telemetryEnabled": false,
-    "continue.enableTabAutocomplete": false,
+    "continue.enableTabAutocomplete": true,
+    "continue.enableNextEdit": false,
 }

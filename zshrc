@@ -85,14 +85,15 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
+export OPENSHELL_TELEMETRY_ENABLED=false
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -101,15 +102,37 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 
-# aichat integrations 
-source $ZSH_CUSTOM/aichat/integration.zsh
-source $ZSH_CUSTOM/aichat/completion.zsh
-
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Start an interactive bash shell in a container of the given compose project
+dbash() {
+  local project=$1
+  local container
+
+  # Find the container by its compose project label
+  container=$(sudo docker ps -a \
+    --filter "label=com.docker.compose.project=$project" \
+    --format "{{.Names}}" | head -1)
+
+  [ -z "$container" ] && { echo "Container $project not found"; return 1; }
+
+  # Start the container if it is stopped
+  [ "$(sudo docker inspect -f '{{.State.Running}}' "$container")" = "false" ] && \
+    sudo docker start "$container" >/dev/null
+
+  # Interactive bash in the root directory (/)
+  sudo docker exec -it "$container" bash
+}
+
+alias bash-agent='dbash pi-agent'
+alias bash-local='dbash pi-local'
+
+# support obsidian flatpak version 
+alias obsidian='ln -sf /run/user/$(id -u)/.flatpak/md.obsidian.Obsidian/xdg-run/.obsidian-cli.sock /run/user/$(id -u)/.obsidian-cli.sock 2>/dev/null; command obsidian'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

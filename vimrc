@@ -3,9 +3,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set autoindent
+"set autoindent
 filetype indent on " load filetype-spicific indent fils 
-
+  
 let mapleader=" "
 
 set encoding=utf-8
@@ -17,6 +17,11 @@ set colorcolumn=79
 
 set clipboard+=unnamedplus
 
+" Whitespaces 
+set list
+set lcs+=space:·
+set lcs+=tab:->
+
 " Langs 
 set spell spelllang=en_us,ru
 
@@ -26,6 +31,8 @@ let mapleader=" "
 
 " Exit from insert mode 
 inoremap jk <esc> 
+
+source ~/.vim/clipboard.vim
 
 " ctrl-shift-x is cut
 vnoremap <C-S-X> "+x
@@ -42,7 +49,7 @@ cmap <C-S-V>  <C-R>+
 colorscheme gruvbox
 
 " Plugins 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+"nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>

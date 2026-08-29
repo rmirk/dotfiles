@@ -1,1 +1,5 @@
 .vscode/*
+vim/spell/*
+vim/plugged/*
+vim/bundle/*
+

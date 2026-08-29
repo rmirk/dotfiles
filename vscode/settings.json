@@ -1,5 +1,6 @@
 {
     // Text editor 
+    "editor.tabSize": 2,
     "editor.codeLens": false,
     "editor.fontLigatures": true,
     "editor.quickSuggestions": {
@@ -14,8 +15,10 @@
     "editor.minimap.autohide": "scroll",
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
-    "editor.rulers": [120],
-    "editor.tabSize": 2,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.rulers": [
+        120
+    ],
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -37,14 +40,14 @@
 
     "diffEditor.renderSideBySide": true,
     "diffEditor.experimental.showMoves": true,
-    "diffEditor.ignoreTrimWhitespace": true,
-
-    // Workbench
-    "workbench.colorTheme": "Darcula",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#007acc66"
     },
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Darcula",
+    "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": "single",
     "workbench.editor.tabSizingFixedMaxWidth": 140,
     "workbench.editor.wrapTabs": true,
@@ -56,7 +59,6 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.settings.showAISearchToggle": false,
     "breadcrumbs.icons": false,
-    "breadcrumbs.enabled": false,
 
     // Window 
     "window.restoreWindows": "none",
@@ -150,6 +152,10 @@
 
     "continue.enableConsole": true,
     "continue.telemetryEnabled": false,
-    "continue.enableTabAutocomplete": true,
+    "continue.enableTabAutocomplete": false,
     "continue.enableNextEdit": false,
+
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+
+    "remote.SSH.showLoginTerminal": true,
 }

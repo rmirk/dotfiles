@@ -43,5 +43,10 @@
     "key": "ctrl+alt+space",
     "command": "-continue.forceAutocomplete",
     "when": "editorTextFocus && !editorHasSelection && !editorReadOnly && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.terminal.goToRecentDirectory",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   }
 ]
